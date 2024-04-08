@@ -1,0 +1,9 @@
+name: ShadowSMP
+version: '${project.version}'
+main: me.minignomer.shadowsmp.ShadowSMP
+api-version: '1.20'
+authors: [MiniGnomer]
+commands:
+  get:
+    permission: shadowsmp.get
+    usage: /<command> <item>
