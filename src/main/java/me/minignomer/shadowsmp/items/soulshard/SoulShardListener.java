@@ -35,18 +35,18 @@ public class SoulShardListener extends LivesManager implements Listener {
             return;
         }
 
-
+        addLives(p, 1);
         heldItem.setAmount(heldItem.getAmount() - 1);
 
-        if (killedPlayer.isOnline()) {
 
             if (getLives(killedPlayer) == 1) {
                 setLives(killedPlayer, -1);
-                ((Player) killedPlayer).getInventory().clear();
-                ((Player) killedPlayer).kickPlayer("§c§lYou have no more lives!");
+                if (killedPlayer.isOnline()) {
+                    ((Player) killedPlayer).getInventory().clear();
+                    ((Player) killedPlayer).kickPlayer("§c§lYou have no more lives!");
+                }
                 Bukkit.broadcastMessage("§c§l" + killedPlayer.getName() + " has been §r§4§lELIMINATED");
                 return;
-            }
         }
 
         removeLives(killedPlayer, 1);
