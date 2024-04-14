@@ -2,6 +2,7 @@ package me.minignomer.shadowsmp;
 
 import com.samjakob.spigui.SpiGUI;
 import me.minignomer.shadowsmp.abilities.phantom.PhantomBuff;
+import me.minignomer.shadowsmp.abilities.phantom.PhantomDebuff;
 import me.minignomer.shadowsmp.actionbardisplay.DisplayActionBar;
 import me.minignomer.shadowsmp.commands.GetCommand;
 import me.minignomer.shadowsmp.commands.GetTabCompleter;
@@ -29,6 +30,7 @@ public final class ShadowSMP extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PhantomBuff(), this);
 
         // Debuffs
+        getServer().getPluginManager().registerEvents(new PhantomDebuff(), this);
     }
 
     private void registerCommands() {
