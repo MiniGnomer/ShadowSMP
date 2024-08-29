@@ -35,6 +35,11 @@ public class SoulShardListener extends LivesManager implements Listener {
             return;
         }
 
+        if (getLives(p) == 10) {
+            p.sendMessage("§c§lYou already have the maximum amount of lives!");
+            return;
+        }
+
         addLives(p, 1);
         heldItem.setAmount(heldItem.getAmount() - 1);
 

@@ -13,6 +13,11 @@ public class GetTabCompleter implements TabCompleter {
         List<String> options = new ArrayList<>();
         if (args.length == 1) {
             options.add("Revive");
+            options.add("Hunt_Orb");
+            options.add("Oni_Item");
+            options.add("ReRoll");
+            options.add("Smudge_Stick");
+            options.add("Obake_Item");
         }
         return options;
     }

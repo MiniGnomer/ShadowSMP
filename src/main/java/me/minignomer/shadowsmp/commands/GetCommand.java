@@ -27,6 +27,21 @@ public class GetCommand implements CommandExecutor {
             case "REVIVE":
                 p.getInventory().addItem(ItemManager.revive);
                 break;
+            case "HUNT_ORB":
+                p.getInventory().addItem(ItemManager.huntOrb);
+                break;
+            case "ONI_ITEM":
+                p.getInventory().addItem(ItemManager.oniItem);
+                break;
+            case "REROLL":
+                p.getInventory().addItem(ItemManager.reRoll);
+                break;
+            case "SMUDGE_STICK":
+                p.getInventory().addItem(ItemManager.smudgeStick);
+                break;
+            case "OBAKE_ITEM":
+                p.getInventory().addItem(ItemManager.obakeItem);
+                break;
             default:
                 p.sendMessage("§c§l" + args[0] + " isn't an option for an item!");
                 return true;
